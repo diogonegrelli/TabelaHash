@@ -15,29 +15,51 @@ public class TabelaHash {
         return (chave % size);
     }
 
-    public void inserirCliente(Cliente cliente){
+    public void inserirCliente1(Cliente cliente){
         int idCliente = cliente.getIdCliente();
         int pos = funcaoHash(idCliente);
-        if (tabelaHash[pos] == null);
+        if (tabelaHash[pos].getIdCliente() == -1);
             tabelaHash[pos] = cliente;
-
     }
 
-    public Cliente buscarCliente(int chave){
+    public Cliente buscarCliente(int chave) {
         int pos = funcaoHash(chave);
-        if (tabelaHash[pos].getIdCliente() ==-1) {
-            return null;}
-        else{
-            return tabelaHash[pos];
+        if (tabelaHash[pos].getIdCliente() == -1) {
+            System.out.println("Objeto não encontrado!");
+        } else {
+            if (tabelaHash[pos].getIdCliente() == chave) {
+                System.out.println("Item encontrado!");
+            }
         }
+        return tabelaHash[pos];
     }
 
     public Cliente removerCliente(int chave){
         int pos = funcaoHash(chave);
-        return null;
+        if (tabelaHash[pos].getIdCliente() == -1){
+            System.out.println("Falha na remoção, item não encontrado!");
+            return null;
+        }
+        else{
+            if(tabelaHash[pos].getIdCliente() == chave){
+                System.out.println("Cliente: "+ tabelaHash[pos].getIdCliente() +"-"+ tabelaHash[pos].getNomeCliente());
+                System.out.println("Removido com sucesso!");
+                tabelaHash[pos].setIdCliente(-2);
+                tabelaHash[pos].setNomeCliente(" ");
+            }
+        }
+        return tabelaHash[pos];
     }
 
-    public Cliente[] getTabelaHash() {
-        return tabelaHash;
+    public void printarTabela(){
+        System.out.println("--------------------");
+        System.out.println("Tabela Hash CLientes");
+        System.out.println("       ID       NOME");
+        for (int i = 0  ; i< size ; i++){
+            System.out.println(i + "  |   " + tabelaHash[i].getIdCliente()+ "  | " + tabelaHash[i].getNomeCliente());
+            System.out.println("-------------------------");
+        }
     }
+
+
 }

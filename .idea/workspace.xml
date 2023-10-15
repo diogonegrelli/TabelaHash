@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51bdf8e9-3251-48d7-b435-5c939eb9f92c" name="Changes" comment="">
+    <list default="true" id="51bdf8e9-3251-48d7-b435-5c939eb9f92c" name="Changes" comment="Criação tabelaHash, desenvolvimento da funcaoHash,inserção.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -26,7 +26,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2WflOMCGZD5Zm9nDfISY0zq3kXJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -51,6 +51,18 @@
       <option name="presentableId" value="Default" />
       <updated>1697131482708</updated>
     </task>
+    <task id="LOCAL-00001" summary="Criação tabelaHash, desenvolvimento da funcaoHash,inserção.">
+      <created>1697383201849</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697383201849</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Criação tabelaHash, desenvolvimento da funcaoHash,inserção." />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação tabelaHash, desenvolvimento da funcaoHash,inserção." />
   </component>
 </project>

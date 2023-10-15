@@ -2,10 +2,11 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        
+
         TabelaHash clientes = new TabelaHash();
 
         Cliente vazio = new Cliente(-1, "");
+        clientes.iniciarTabela(vazio);
 
         Cliente c10 = new Cliente(546, "Ana");
         Cliente c11 = new Cliente(234, "Carlos");
@@ -17,28 +18,28 @@ public class Main {
         Cliente c17 = new Cliente(447, "Amanda");
         Cliente c18 = new Cliente(675, "Claudio");
 
-        clientes.iniciarTabela(vazio);
-        clientes.inserirCliente(c17);
-        clientes.inserirCliente(c13);
-        clientes.inserirCliente(c10);
-        clientes.inserirCliente(c12);
-        clientes.inserirCliente(c11);
-        clientes.inserirCliente(c16);
-        clientes.inserirCliente(c15);
-        clientes.inserirCliente(c14);
+
+        clientes.inserirCliente1(c17);
+        clientes.inserirCliente1(c13);
+        clientes.inserirCliente1(c10);
+        clientes.inserirCliente1(c12);
+        clientes.inserirCliente1(c11);
+        clientes.inserirCliente1(c16);
+        clientes.inserirCliente1(c15);
+        clientes.inserirCliente1(c14);
+        clientes.inserirCliente1(c18);
 
 
+        clientes.printarTabela();
 
+        clientes.buscarCliente(15);
+        clientes.removerCliente(675);
+        clientes.printarTabela();
 
-
-
-
-        System.out.println("--------------------");
-        System.out.println("Tabela Hash CLientes");
-        System.out.println("Chave  -  ID  - Nome");
-        for (int i = 0  ; i< clientes.size ; i++){
-            System.out.println(i + "        " + clientes.tabelaHash[i].getIdCliente()+ "   " + clientes.tabelaHash[i].getNomeCliente());
-        }
-
+        clientes.removerCliente(447);
+        clientes.removerCliente(367);
+        clientes.printarTabela();
     }
+
+
 }

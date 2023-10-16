@@ -2,9 +2,18 @@ Projeto realizado na aula de Estrutura de Dados, para a PUC-PR, o projeto tem co
 uma classe Cliente para representar os objetos que serão inseridos na tabela hash, tendo como atributos o ID e o nome do Cliente, mas para fins de manipulação da tabela hash vamos utilizar apenas o ID. Também foi criado dois modos de tratamento de colisões que são os seguintes:
 
 1) Encadeamento Interior Heterogêneo, nesse tratamento o foco está em limitar as posições que podem ser usadas para inserção de elementos na tabela, nesse caso existem 13 slots para serem preenchidos porém a função hash irá se limitar a apenas 9 deles para serem usados para alocação inicial, e, em caso de colisão, serão usados os últimos slots de 9 a 13 para alocar elementos que colidiram. A imagem abaixo demonstra como foi feita a limitação de posições:
+
+
    ![image](https://github.com/diogonegrelli/TabelaHash/assets/85641230/69e24f53-badc-40c8-8d5e-2f32546cd259)
+
+
+   
 Para realizar a alocação de elementos nos slots finais é utilizada uma iteração dos slots a partir da posição 9. O resultado pode ser analisado nas prints abaixo:
+
+
 ![image](https://github.com/diogonegrelli/TabelaHash/assets/85641230/be9a3400-aa4a-430a-be77-3797870f48b6)
+
+
 
 Cliente Carlos que estava na posição 0 foi removido e fica registrado o valor -2 para constar a remoção para fins de busca e futuras remoções.
 

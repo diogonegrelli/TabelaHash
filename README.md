@@ -1,7 +1,7 @@
 Projeto realizado para a disciplina de Estrutura de Dados, Engenharia de Software PUC-PR. O projeto tem como foco a criação de uma tabela HASH em java sem utilizar estruturas próprias do JAVA, no projeto foi criado
 uma classe Cliente para representar os objetos que serão inseridos na tabela hash, tendo como atributos o ID e o nome do Cliente, mas para fins de manipulação da tabela hash vamos utilizar apenas o ID. Também foi criado dois modos de tratamento de colisões que são os seguintes:
 
-1) Encadeamento Interior Heterogêneo, nesse tratamento o foco está em limitar as posições que podem ser usadas para inserção de elementos na tabela, nesse caso existem 13 slots para serem preenchidos porém a função hash irá se limitar a apenas 9 deles para serem usados para alocação inicial, e, em caso de colisão, serão usados os últimos slots de 9 a 13 para alocar elementos que colidiram. A imagem abaixo demonstra como foi feita a limitação de posições:
+1) Encadeamento Interior Heterogêneo, nesse tratamento o foco está em limitar as posições que podem ser usadas para inserção de elementos na tabela, nesse caso existem 13 slots para serem preenchidos porém a função hash irá se limitar a apenas 9 deles para serem usados para alocação inicial, e, em caso de colisão, serão usados os últimos slots de 9 a 12 para alocar elementos que colidiram. A imagem abaixo demonstra como foi feita a limitação de posições:
 
 
    ![image](https://github.com/diogonegrelli/TabelaHash/assets/85641230/69e24f53-badc-40c8-8d5e-2f32546cd259)

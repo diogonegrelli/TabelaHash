@@ -29,3 +29,6 @@ Em seguida o cliente Cláudio, que pela função hash deveria estar na posição
 
 Desta forma o resultado será diferente da outra forma de tratamento visto que os elementos vao se alocando no primeiro slot disponível que encontram como demonstra o print a seguir:
 
+<img width="242" alt="Screenshot 2023-10-16 at 00 50 38" src="https://github.com/diogonegrelli/TabelaHash/assets/128303802/96ee3105-03a5-4919-91ea-89a657c56b7f">
+
+

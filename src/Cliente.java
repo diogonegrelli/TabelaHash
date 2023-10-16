@@ -2,8 +2,6 @@
 public class Cliente <T>{
     private int idCliente;
     private String nomeCliente;
-    Cliente leftNode;
-    Cliente rightNode;
 
     public Cliente(int idCliente, String nomeCliente){
         this.idCliente = idCliente;

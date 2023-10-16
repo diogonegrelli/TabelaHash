@@ -15,7 +15,7 @@ public class Main {
         Cliente c14 = new Cliente(945, "Laura");
         Cliente c15 = new Cliente(021, "Henrique");
         Cliente c16 = new Cliente(367, "Caio");
-        Cliente c17 = new Cliente(447, "Amanda");
+        Cliente c17 = new Cliente(447, "Ameinda");
         Cliente c18 = new Cliente(675, "Claudio");
 
 
@@ -32,13 +32,9 @@ public class Main {
 
         clientes.printarTabela();
 
-        clientes.buscarCliente(15);
-        clientes.removerCliente(675);
-        clientes.printarTabela();
 
-        clientes.removerCliente(447);
-        clientes.removerCliente(367);
-        clientes.printarTabela();
+        clientes.buscarCliente(12);
+
     }
 
 

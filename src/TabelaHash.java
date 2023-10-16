@@ -1,9 +1,13 @@
 import java.util.Hashtable;
+import java.util.LinkedList;
 
 public class TabelaHash {
 
-    Cliente tabelaHash [] = new Cliente[12];
+
+    Cliente tabelaHash [] = new Cliente[13];
+
     int size = tabelaHash.length;
+    int posicoes = 9;
 
     public void iniciarTabela(Cliente vazio){
         for (int i =0; i< size ; i++){
@@ -12,14 +16,24 @@ public class TabelaHash {
     }
 
     public int funcaoHash(int chave){
-        return (chave % size);
+        return (chave % posicoes);
     }
 
     public void inserirCliente1(Cliente cliente){
+        int posicaoColisao = 9;
         int idCliente = cliente.getIdCliente();
         int pos = funcaoHash(idCliente);
-        if (tabelaHash[pos].getIdCliente() == -1);
-            tabelaHash[pos] = cliente;
+        if (tabelaHash[pos].getIdCliente() == -1 || tabelaHash[pos].getIdCliente() == -2){
+            tabelaHash[pos] = cliente;}
+        else{
+            while (posicaoColisao <13){
+                if (tabelaHash[posicaoColisao].getIdCliente()==-1 || tabelaHash[posicaoColisao].getIdCliente()==-2){
+                    tabelaHash[posicaoColisao] = cliente;
+                    return;
+                }
+                posicaoColisao = posicaoColisao +1;
+            }
+        }
     }
 
     public Cliente buscarCliente(int chave) {

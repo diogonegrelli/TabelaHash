@@ -18,20 +18,20 @@ public class Main {
         Cliente c18 = new Cliente(675, "Claudio");
 
         clientes.iniciarTabela(vazio);
-        clientes.inserirCliente(c17);
-        clientes.inserirCliente(c13);
-        clientes.inserirCliente(c10);
-        clientes.inserirCliente(c12);
-        clientes.inserirCliente(c11);
-        clientes.inserirCliente(c16);
-        clientes.inserirCliente(c15);
-        clientes.inserirCliente(c14);
+        clientes.inserirClienteTratado(c17);
+        clientes.inserirClienteTratado(c13);
+        clientes.inserirClienteTratado(c10);
+        clientes.inserirClienteTratado(c12);
+        clientes.inserirClienteTratado(c11);
+        clientes.inserirClienteTratado(c16);
+        clientes.inserirClienteTratado(c15);
+        clientes.inserirClienteTratado(c14);
 
-
-
-
-
-
+        clientes.removerClienteTratado(675);
+        clientes.removerClienteTratado(234);
+        clientes.buscarClienteTratado(123);
+        clientes.buscarClienteTratado(675);
+        clientes.buscarClienteTratado(234);
 
         System.out.println("--------------------");
         System.out.println("Tabela Hash CLientes");

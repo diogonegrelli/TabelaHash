@@ -18,6 +18,7 @@ public class TabelaHash {
     public int funcaoHash(int chave){
         return (chave % posicoes);
     }
+    
 
     public void inserirCliente1(Cliente cliente){
         int posicaoColisao = 9;
@@ -38,32 +39,58 @@ public class TabelaHash {
 
     public Cliente buscarCliente(int chave) {
         int pos = funcaoHash(chave);
-        if (tabelaHash[pos].getIdCliente() == -1) {
-            System.out.println("Objeto não encontrado!");
-        } else {
-            if (tabelaHash[pos].getIdCliente() == chave) {
-                System.out.println("Item encontrado!");
-            }
-        }
-        return tabelaHash[pos];
-    }
 
-    public Cliente removerCliente(int chave){
-        int pos = funcaoHash(chave);
-        if (tabelaHash[pos].getIdCliente() == -1){
-            System.out.println("Falha na remoção, item não encontrado!");
+            if (tabelaHash[pos].getIdCliente() == -1) {
+                System.out.println("Objeto não encontrado!");
+            } else {
+                if (tabelaHash[pos].getIdCliente() == chave) {
+                    System.out.println("Item encontrado!");
+                
+                }else{
+                    for(int i = posicoes; i < size; i++) {
+                        if(tabelaHash[i].getIdCliente() == chave) {
+                            System.out.println("Item Encontrado!");
+                            return tabelaHash[i];
+                        }
+                    }
+            System.out.println("Item não encontrado");
             return null;
         }
-        else{
-            if(tabelaHash[pos].getIdCliente() == chave){
-                System.out.println("Cliente: "+ tabelaHash[pos].getIdCliente() +"-"+ tabelaHash[pos].getNomeCliente());
-                System.out.println("Removido com sucesso!");
-                tabelaHash[pos].setIdCliente(-2);
-                tabelaHash[pos].setNomeCliente(" ");
+            
+            }
+            return tabelaHash[pos];
+    }
+
+    
+
+    public Cliente removerCliente(int chave) {
+        int pos = funcaoHash(chave);
+    
+        if (tabelaHash[pos].getIdCliente() == -1) {
+            System.out.println("Falha na remoção, item não encontrado!");
+            return null;
+        } else if (tabelaHash[pos].getIdCliente() == chave) {
+            System.out.println("Cliente: " + tabelaHash[pos].getIdCliente() + "-" + tabelaHash[pos].getNomeCliente());
+            System.out.println("Removido com sucesso!");
+            tabelaHash[pos].setIdCliente(-2);
+            tabelaHash[pos].setNomeCliente(" ");
+            return tabelaHash[pos];
+        } else {
+            for (int i = posicoes; i < size; i++) {
+                if (tabelaHash[i].getIdCliente() == chave) {
+                    System.out.println("Cliente: " + tabelaHash[i].getIdCliente() + "-" + tabelaHash[i].getNomeCliente());
+                    System.out.println("Removido com sucesso!");
+                    tabelaHash[i].setIdCliente(-2);
+                    tabelaHash[i].setNomeCliente(" ");
+                    return tabelaHash[i];
+                }
             }
         }
-        return tabelaHash[pos];
+    
+        System.out.println("Falha na remoção, item não encontrado!");
+        return null;
     }
+    
 
     public void printarTabela(){
         System.out.println("--------------------");

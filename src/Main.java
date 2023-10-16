@@ -24,16 +24,19 @@ public class Main {
         clientes.inserirCliente1(c10);
         clientes.inserirCliente1(c12);
         clientes.inserirCliente1(c11);
-        clientes.inserirCliente1(c16);
+        //clientes.inserirCliente1(c16);
         clientes.inserirCliente1(c15);
-        clientes.inserirCliente1(c14);
+        //clientes.inserirCliente1(c14);
         clientes.inserirCliente1(c18);
 
 
         clientes.printarTabela();
 
 
-        clientes.buscarCliente(12);
+       // clientes.buscarCliente(367);
+        clientes.removerCliente(234);
+        clientes.removerCliente(675);
+        clientes.printarTabela();
 
     }
 
